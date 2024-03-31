@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanya Agrawal's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo">
+        <ul id="sidemenu" class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <script>
+          // Add the menu icon only for small screens
+          if (window.matchMedia("(max-width: 600px)").matches) {
+            document.querySelector('nav').innerHTML += '<i class="fas fa-bars" onclick="openmenu()"></i>';
+            document.querySelector('nav').innerHTML += '<i class="fas fa-times" onclick="closemenu()"></i>';
+          }
+        </script>
+      </nav>
+      <div class="header-text">
+        <h1>Hi, I'm Tanya Agrawal, <br>Sophomore at IGDTUW and a tech enthusiast</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/Profile_photo.png">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>"My interests lie in game development, backend development, and AI/ML. I aspire to excel in these fields, creating engaging games, robust backend systems, and innovative AI applications. My goal is to become a tech expert, develop new technologies, and contribute to empowering individuals to lead dignified lives through earning. Passionate about transforming lives into valuable human resources."</p>
+
+          <div class="tab-links-container">
+            <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+            <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+            <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Languages</span><br>C, Java, Python, SQL, HTML, CSS, Javascript, C#</li>
+              <li><span>Developer Tools</span><br>Figma, Unity</li>
+              <li><span>Areas of Interest</span><br>Game Development, Backend Development, and AI/ML</li>
+              <li><span>CourseWork</span><br> Data Structures and Algorithms, Software Engineering,
+                Operating Systems, Database Management System, Object Oriented Programming</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Ransh Innovations Private Limited ® Jan 2024 - Present</span><br>Game Developer Intern
+                <ul>
+                  <li>Developed Ladder of Legends inspired by Snake and Ladders in Unity and C# with Agile methodology, applying SOLID principles for a robust codebase.</li>
+                  <li>Enhanced UX design, scalability, and maintainability, featuring randomized snake animations for added excitement.</li>
+                  <li>Led marketing and product management, ensuring consistency across platforms and encouraging innovation. Includes single-player and multiplayer modes.</li>
+                </ul>
+              </li>
+              <li><span>AI Club - IGDTUW, Delhi ® Jun 2023 - Sept 2023</span><br>AI-ML Intern
+                <ul>
+                  <li>Developed a Toxic Comment Classification system using two deep learning models: Naive Bayes-Logistic Regression and LSTM, with GloVe word embedding.</li>
+                  <li>Evaluated model performance through ROC curve analysis, achieving a final accuracy of 94.34%.</li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Indira Gandhi Delhi Technical University for Women, Delhi</span><br> 2022 - Present<br>BTech in Computer Science and Engineering</li>
+              <li><span>Aadharshila Academy, Ujjain, Madhya Pradesh</span><br>2020 - 2022<br>XII, Central Board of Secondary Education</li>
+              <li><span>Christu Jyoti Convent School, Ujjain, Madhya Pradesh</span><br>2008 - 2020<br>X, Central Board of Secondary Education</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h1 class="sub-title">PROJECTS</h1>
+      <div class="services-list">
+        <div>
+          <h2>EmoteCare<br>Feb 2024</h2>
+          <ul>
+            <li>Implemented backend functionalities using Flask within a website designed to destigmatize mental health and improve accessibility to therapy.</li>
+            <li>Incorporated AI-driven facial emotion detection for real-time insights, tackling societal taboos and financial barriers by combining datasets and utilized TensorFlow CNN, achieving a model accuracy of 66.45%.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Side-Scrolling-Platformer<br>Aug 2023 - Oct 2023</h2>
+          <ul>
+            <li>Developed a classic side-scrolling platformer inspired by Mario, featuring challenging obstacles and interactive objects using Unity and C#.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>TED Talks Web Scraped Dataset<br>Jun 2023 - July 2023</h2>
+          <ul>
+            <li>Conducted Exploratory Data Analysis to gain insights into the dataset, followed by the application of Multiple Linear Regression to analyze the relationship between factors such as duration, views, and likes of TED Talks videos.</li>
+            <li>The model achieved an impressive accuracy of 99.96%, demonstrating its effectiveness in predicting the influence of these factors on video performance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <a href="mailto:tanya2004agrawal@gmail.com" style="color: #ababab;"><i class="fa fa-envelope"></i></a> tanya2004agrawal@gmail.com &nbsp;&nbsp;
+          <i class="fa fa-phone" style="color: #ababab;"></i><span style="margin-left: 10px;">+91-9516737634</span>
+          <div class="social-icons">
+            <a href="https://twitter.com/TanyaAgraw38823" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/tanyaagrawal561" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/tanya-agrawal-a470a8255" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/tanya-2004" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+          <a href="Tanya_Agrawal_Resume.pdf" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="jvsc.js"></script>
+
+</body>
+
+</html>
